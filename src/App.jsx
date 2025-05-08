@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import languagesBtn from './assets/languagesBtn'
+import LanguagesBtn from './LanguagesBtn'
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <languagesBtn />
+      <LanguagesBtn />
     </>
   )
 }

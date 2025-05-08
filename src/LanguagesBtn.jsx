@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-function button() {
+function LanguagesBtn() {
     const languages = [
         {
             id: 1,
@@ -36,15 +36,14 @@ function button() {
 
     return (
         <>
-            {
-                languages.map((languagesBtn) => (
-                    <div key={accordion.id}>
-                        <button>{languagesBtn.title}</button>
-                    </div>
-
-                ))}
+            {languages.map((language) => (
+                <div key={language.id}>
+                    <button>{language.title}</button>
+                    <p>{language.description}</p>
+                </div>
+            ))}
         </>
-    )
+    );
 }
 
-export default languagesBtn
+export default LanguagesBtn;
