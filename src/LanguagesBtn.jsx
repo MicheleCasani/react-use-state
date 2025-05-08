@@ -38,12 +38,14 @@ function LanguagesBtn() {
         <>
             {languages.map((language) => (
                 <div key={language.id}>
-                    <button>{language.title}</button>
-                    <p>{language.description}</p>
+                    <button className="btn">{language.title}</button>
+
                 </div>
+
             ))}
         </>
     );
 }
 
 export default LanguagesBtn;
+
