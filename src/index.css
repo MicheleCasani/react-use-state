@@ -1,6 +1,9 @@
 .container {
     width: 1200px;
     margin: 0 auto;
+    border: 1px solid rgb(235, 232, 232);
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .row {
@@ -10,7 +13,6 @@
 }
 
 .btn {
-    background-color: rgb(80, 80, 255);
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -23,6 +25,31 @@
     cursor: pointer;
 }
 
-.btn:active {
+.yellow {
     background-color: rgb(212, 188, 1);
+}
+
+.blue {
+    background-color: rgb(80, 80, 255);
+}
+
+.active {
+    display: none;
+}
+
+.not-active {
+    display: block;
+}
+
+.description {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.header {
+    background-color: rgb(235, 232, 232);
+    border-radius: 10px;
 }

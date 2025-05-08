@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 function LanguagesBtn() {
     const languages = [
@@ -34,14 +35,30 @@ function LanguagesBtn() {
         }
     ];
 
+    const [color, setColor] = useState("blue");
+
+    const [selectLanguages, setSelectLanguages] = useState(null);
+
+    const toggledescription = (id) => {
+        if (selectLanguages === id) {
+            setSelectLanguages(null);
+        }
+        else {
+            setSelectLanguages(id)
+        }
+    }
+
     return (
         <>
             {languages.map((language) => (
                 <div key={language.id}>
-                    <button className="btn">{language.title}</button>
-
+                    <button onClick={() => toggledescription(language.id)} className={`btn ${selectLanguages === language.id ? "yellow" : "blue"}`}>
+                        {language.title}
+                    </button>
+                    <div className={selectLanguages === language.id ? "description not-active" : "description active"}>
+                        {language.description}
+                    </div>
                 </div>
-
             ))}
         </>
     );
