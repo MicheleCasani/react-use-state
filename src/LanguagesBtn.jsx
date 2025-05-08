@@ -35,8 +35,6 @@ function LanguagesBtn() {
         }
     ];
 
-    const [color, setColor] = useState("blue");
-
     const [selectLanguages, setSelectLanguages] = useState(null);
 
     const toggledescription = (id) => {
