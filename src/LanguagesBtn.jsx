@@ -49,14 +49,16 @@ function LanguagesBtn() {
     return (
         <>
             {languages.map((language) => (
-                <div key={language.id}>
-                    <button onClick={() => toggledescription(language.id)} className={`btn ${selectLanguages === language.id ? "yellow" : "blue"}`}>
-                        {language.title}
-                    </button>
+                <>
+                    <div key={language.id}>
+                        <button onClick={() => toggledescription(language.id)} className={`btn ${selectLanguages === language.id ? "yellow" : "blue"}`}>
+                            {language.title}
+                        </button>
+                    </div>
                     <div className={selectLanguages === language.id ? "description not-active" : "description active"}>
                         {language.description}
                     </div>
-                </div>
+                </>
             ))}
         </>
     );
