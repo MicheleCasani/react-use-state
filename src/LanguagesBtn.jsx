@@ -35,7 +35,9 @@ function LanguagesBtn() {
         }
     ];
 
+
     const [selectLanguages, setSelectLanguages] = useState(null);
+
 
     const toggledescription = (id) => {
         if (selectLanguages === id) {
@@ -56,7 +58,12 @@ function LanguagesBtn() {
                         </button>
                     </div>
                     <div className={selectLanguages === language.id ? "description not-active" : "description active"}>
-                        {language.description}
+                        <div className="card-title">
+                            {language.title}
+                        </div>
+                        <div>
+                            {language.description}
+                        </div>
                     </div>
                 </>
             ))}
